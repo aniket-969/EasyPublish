@@ -57,7 +57,7 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #e0e7ff; /* lighter shade on hover */
+  color: #e0e7ff; 
 }
 
 /* Hamburger icon */
@@ -120,8 +120,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding-top: 100px; /* More space because of navbar */
-  padding-bottom: 40px; /* Some breathing space at bottom */
   background-color: #fafafa;
 }
 
@@ -129,7 +127,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem; /* a little more gap between text and image */
+  gap: 4rem; 
 }
 
 .hero-text {
@@ -168,7 +166,7 @@ body {
 .hero-image {
   flex: 1;
   text-align: center;
-  padding: 1rem; /* Adds breathing room around image */
+  padding: 1rem; 
 }
 
 .hero-image img {
@@ -176,7 +174,7 @@ body {
   max-width: 380px;
   height: auto;
   object-fit: contain;
-  padding-bottom: 10px; /* Little more breathing space below */
+  padding-bottom: 10px; 
 }
 
 /* Responsive adjustments for Hero Section */
@@ -184,7 +182,7 @@ body {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding-top: 120px; /* more breathing space because navbar collapses too */
+    padding-top: 120px; 
     padding-bottom: 40px;
   }
 
@@ -198,7 +196,7 @@ body {
   }
 
   .hero-text h1 {
-    font-size: 2rem; /* Slightly smaller heading for mobile */
+    font-size: 2rem; 
   }
 
   .hero-text p {
@@ -220,3 +218,90 @@ body {
     max-width: 300px;
   }
 }
+
+
+/* Why us */
+/* Why Us Section */
+.why-us {
+    padding: 0 0 3rem 0;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .badge {
+    display: inline-block;
+    background-color: #6d28d9; /* Dark Purple */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 999px; /* pill shape */
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .why-us h2 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 3rem;
+  }
+  
+  .reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .reason {
+    background-color: #f3f4f6;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .reason:hover {
+    transform: translateY(-5px);
+  }
+  
+  .reason h3 {
+    font-size: 1.5rem;
+    color: #6d28d9;
+    margin-bottom: 1rem;
+  }
+  
+  .reason p {
+    font-size: 1rem;
+    color: #4b5563;
+  }
+
+  .highlighted-price {
+    display: inline-block;
+    background-color: #6d28d9; /* Dark Purple */
+    color: white;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px; /* pill-shaped */
+    font-size: 0.95rem;
+    margin: 0 0.3rem;
+  }
+  
+  /* Responsive adjustments for Why Us Section */
+  @media (max-width: 768px) {
+    .why-us h2 {
+      font-size: 2rem;
+    }
+  
+    .badge {
+      font-size: 0.8rem;
+      padding: 0.4rem 0.8rem;
+    }
+  
+    .reason h3 {
+      font-size: 1.3rem;
+    }
+  
+    .reason p {
+      font-size: 0.95rem;
+    }
+  }
+  
