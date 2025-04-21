@@ -1,202 +1,222 @@
 /* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body Styling */
-  body {
-    font-family: 'Nunito', sans-serif;
-    background-color: #FAFAFA; /* Soft off-white */
-    color: #333; /* Dark text */
-    line-height: 1.6;
-  }
-  
-  /* Container (to center content) */
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Navbar */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #fafafa; /* Soft off-white */
+  color: #333; /* Dark text */
+  line-height: 1.6;
+}
+
+/* Container (to center content) */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
 .navbar {
-    width: 100%;
-    background-color: #8B5CF6; /* Soft Purple */
-    padding: 1rem 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
+  width: 100%;
+  background-color: #8b5cf6; /* Soft Purple */
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #e0e7ff; /* lighter shade on hover */
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
   
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-  }
-  
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Animate to X */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive styles */
+@media (max-width: 868px) {
   .nav-links {
-    list-style: none;
+    position: absolute;
+    top: 70px; /* below navbar */
+    left: 0;
+    right: 0;
+    background-color: #8b5cf6;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    display: none; /* hidden initially */
+  }
+
+  .nav-links.show {
     display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 100px; /* More space because of navbar */
+  padding-bottom: 40px; /* Some breathing space at bottom */
+  background-color: #fafafa;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem; /* a little more gap between text and image */
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+}
+
+.btn-primary {
+  background-color: #6d28d9;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #5b21b6;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1;
+  text-align: center;
+  padding: 1rem; /* Adds breathing room around image */
+}
+
+.hero-image img {
+  width: 85%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+  padding-bottom: 10px; /* Little more breathing space below */
+}
+
+/* Responsive adjustments for Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px; /* more breathing space because navbar collapses too */
+    padding-bottom: 40px;
+  }
+
+  .hero-content {
+    flex-direction: column;
     gap: 2rem;
   }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links li a:hover {
-    color: #E0E7FF; /* lighter shade on hover */
-  }
 
-  /* Hamburger hidden on large screens */
-.hamburger {
-    display: none;
-    font-size: 1.7rem;
-    color: white;
-    cursor: pointer;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 868px) {
-    .nav-links {
-      position: absolute;
-      top: 70px; /* below navbar */
-      left: 0;
-      right: 0;
-      background-color: #8B5CF6;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 1.5rem 0;
-      display: none; /* hidden initially */
-    }
-  
-    .nav-links.show {
-      display: flex;
-    }
-  
-    .hamburger {
-      display: block;
-    }
-  }  
-
-
-  /* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding-top: 100px; /* More space because of navbar */
-    padding-bottom: 40px; /* Some breathing space at bottom */
-    background-color: #FAFAFA;
-  }
-  
-  .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem; /* a little more gap between text and image */
-  }
-  
   .hero-text {
-    flex: 1;
+    flex: unset;
   }
-  
+
   .hero-text h1 {
-    font-size: 2.8rem;
-    color: #1F2937;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Slightly smaller heading for mobile */
   }
-  
+
   .hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    color: #4B5563;
-  }
-  
-  .btn-primary {
-    background-color: #6D28D9;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
     font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
   }
-  
-  .btn-primary:hover {
-    background-color: #5B21B6;
+
+  .btn-primary {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
-  
-  /* Hero Image */
+
   .hero-image {
-    flex: 1;
-    text-align: center;
-    padding: 1rem; /* Adds breathing room around image */
+    flex: unset;
+    padding: 0;
   }
-  
+
   .hero-image img {
-    width: 85%;
-    max-width: 380px;
-    height: auto;
-    object-fit: contain;
-    padding-bottom: 10px; /* Little more breathing space below */
+    width: 80%;
+    max-width: 300px;
   }
-  
-  /* Responsive adjustments for Hero Section */
-@media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      text-align: center;
-      padding-top: 120px; /* more breathing space because navbar collapses too */
-      padding-bottom: 40px;
-    }
-  
-    .hero-content {
-      flex-direction: column;
-      gap: 2rem;
-    }
-  
-    .hero-text {
-      flex: unset;
-    }
-  
-    .hero-text h1 {
-      font-size: 2rem; /* Slightly smaller heading for mobile */
-    }
-  
-    .hero-text p {
-      font-size: 1rem;
-    }
-  
-    .btn-primary {
-      padding: 0.6rem 1.2rem;
-      font-size: 0.9rem;
-    }
-  
-    .hero-image {
-      flex: unset;
-      padding: 0;
-    }
-  
-    .hero-image img {
-      width: 80%;
-      max-width: 300px;
-    }
-  }
-  
+}
