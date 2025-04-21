@@ -158,3 +158,45 @@
     padding-bottom: 10px; /* Little more breathing space below */
   }
   
+  /* Responsive adjustments for Hero Section */
+@media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 120px; /* more breathing space because navbar collapses too */
+      padding-bottom: 40px;
+    }
+  
+    .hero-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .hero-text {
+      flex: unset;
+    }
+  
+    .hero-text h1 {
+      font-size: 2rem; /* Slightly smaller heading for mobile */
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    .btn-primary {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  
+    .hero-image {
+      flex: unset;
+      padding: 0;
+    }
+  
+    .hero-image img {
+      width: 80%;
+      max-width: 300px;
+    }
+  }
+  
