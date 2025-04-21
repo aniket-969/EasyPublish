@@ -116,12 +116,14 @@ body {
 
 /* Hero Section */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #fafafa;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 6rem 0 2rem 0; /* more top padding because navbar, less bottom padding */
+    background-color: #fafafa;
+  }
+  
 
 .hero-content {
   display: flex;
@@ -221,12 +223,12 @@ body {
 
 
 /* Why us */
-/* Why Us Section */
 .why-us {
-    padding: 0 0 3rem 0;
+    padding: 0 0 3rem 0; 
     background-color: #ffffff;
     text-align: center;
   }
+  
   
   .badge {
     display: inline-block;
@@ -301,6 +303,69 @@ body {
     }
   
     .reason p {
+      font-size: 0.95rem;
+    }
+  }
+  
+
+  /* How It Works Section */
+.how-it-works {
+    padding: 2rem 0;
+    background-color: #fafafa;
+    text-align: center;
+  }
+  
+  .how-it-works h2 {
+    font-size: 2.5rem;
+    color: #1f2937;
+    margin-bottom: 3rem;
+  }
+  
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .step {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .step:hover {
+    transform: translateY(-5px);
+  }
+  
+  .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .step h3 {
+    font-size: 1.5rem;
+    color: #6d28d9;
+    margin-bottom: 1rem;
+  }
+  
+  .step p {
+    font-size: 1rem;
+    color: #4b5563;
+  }
+  
+  /* Responsive for How It Works */
+  @media (max-width: 768px) {
+    .how-it-works h2 {
+      font-size: 2rem;
+    }
+  
+    .step h3 {
+      font-size: 1.3rem;
+    }
+  
+    .step p {
       font-size: 0.95rem;
     }
   }
