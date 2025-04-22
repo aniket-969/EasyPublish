@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -126,46 +131,51 @@
     <section id="testimonials" class="testimonials">
       <div class="container">
         <h2>Success Stories</h2>
-        <div class="testimonial-slider">
-          <div class="testimonial">
-            <img src="assets/testimonials/prince.jpg" alt="Divyanshu S" />
-            <p>"Got my paper published within 2 days, super easy!"</p>
-            <h4>- Divyanshu S.</h4>
-          </div>
-    
-          <div class="testimonial">
-            <img src="assets/testimonials/deepak.jpg" alt="Deepak K" />
-            <p>"Friendly support from start to finish!"</p>
-            <h4>- Deepak K.</h4>
-          </div>
-    
-          <div class="testimonial">
-            <img src="assets/testimonials/nitin.png" alt="Knee Tin S" />
-            <p>"Clear process and affordable rates, highly recommend!"</p>
-            <h4>- Knee Tin S.</h4>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial">
+              <img src="assets/testimonials/prince.jpg" alt="Divyanshu S" />
+              <p>"Got my paper published within 2 days, super easy!"</p>
+              <h4>- Divyanshu S.</h4>
+            </div>
+
+            <div class="swiper-slide testimonial">
+              <img src="assets/testimonials/deepak.jpg" alt="Deepak K" />
+              <p>"Friendly support from start to finish!"</p>
+              <h4>- Deepak K.</h4>
+            </div>
+
+            <div class="swiper-slide testimonial">
+              <img src="assets/testimonials/nitin.png" alt="Knee Tin S." />
+              <p>"Clear process and affordable rates, highly recommend!"</p>
+              <h4>- Knee Tin S.</h4>
+            </div>
+
+            <div class="swiper-slide testimonial">
+              <img src="assets/testimonials/archit gupta.png" alt="Archit G." />
+              <p>"Was guided patiently at every step — great experience!"</p>
+              <h4>- Archit G.</h4>
+            </div>
+  
+            <div class="swiper-slide testimonial">
+              <img src="assets/testimonials/aniket.png" alt="Aniket K" />
+              <p>"Publishing made simple and affordable, thank you team!"</p>
+              <h4>- Aniket K.</h4>
+            </div>
+            <div class="swiper-slide testimonial">
+              <img src="assets/testimonials/abhijeet.png" alt="Abhijeet" />
+              <p>"Smooth communication and quick publishing, highly satisfied!"</p>
+              <h4>- Abhijeet</h4>
+            </div>
           </div>
 
-          <div class="testimonial">
-            <img src="assets/testimonials/archit gupta.png" alt="Archit G." />
-            <p>"Clear process and affordable rates, highly recommend!"</p>
-            <h4>- Archit G.</h4>
-          </div>
-
-          <div class="testimonial">
-            <img src="assets/testimonials/aniket.png" alt="Aniket K" />
-            <p>"Clear process and affordable rates, highly recommend!"</p>
-            <h4>- Aniket K.</h4>
-          </div>
-          <div class="testimonial">
-            <img src="assets/testimonials/abhijeet.png" alt="Abhijeet" />
-            <p>"Clear process and affordable rates, highly recommend!"</p>
-            <h4>- Abhijeet</h4>
-          </div>
-    
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
-    
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
@@ -215,7 +225,7 @@
         </div>
       </div>
     </section>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- JavaScript -->
     <script src="script.js"></script>
   </body>

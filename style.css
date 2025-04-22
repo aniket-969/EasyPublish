@@ -416,12 +416,11 @@ body {
   }
 }
 
-/* Testimonials Section */
-.testimonials {
+/* Testimonials Section */.testimonials {
   padding: 5rem 0;
   background-color: var(--section-background);
   text-align: center;
-  overflow: hidden; /* Hide overflow for auto-scrolling */
+  overflow: hidden;
 }
 
 .testimonials h2 {
@@ -430,31 +429,15 @@ body {
   margin-bottom: 3rem;
 }
 
-/* This must match your div class testimonial-slider */
-.testimonial-slider {
-  display: flex;
-  gap: 2rem;
-  animation: scroll 40s linear infinite;
-  width: max-content;
-}
-
-/* Each testimonial box */
 .testimonial {
-  min-width: 300px;
   background-color: var(--background-color);
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
-  flex-shrink: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
-.testimonial:hover {
-  transform: translateY(-5px);
-}
-
-/* Profile picture inside testimonial */
 .testimonial img {
   width: 80px;
   height: 80px;
@@ -474,24 +457,12 @@ body {
   color: var(--button-primary-bg);
 }
 
-/* Auto-scroll animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+/* Optional: Customize Swiper arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--button-primary-bg);
 }
 
-/* Responsive: stop auto-scroll and show normally on mobile */
-@media (max-width: 768px) {
-  .testimonial-slider {
-    animation: none;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
 
 /* Pricing Section */
 .pricing {
