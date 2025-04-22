@@ -1,6 +1,6 @@
 :root {
   --navbar-bg: #8b5cf6; /* Soft purple */
-  --navbar-hover: #e0e7ff; 
+  --navbar-hover: #e0e7ff;
   --background-color: #fafafa;
   --section-background: #ffffff;
   --text-color: #333;
@@ -10,7 +10,6 @@
   --button-primary-hover: #5b21b6;
   --whatsapp-green: #25d366;
   --whatsapp-green-hover: #1ebe57;
-  
 }
 
 /* Dark mode overrides */
@@ -201,11 +200,11 @@ body {
 .btn-primary {
   background-color: var(--button-primary-bg);
   color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 10px;
+  font-weight: 700;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
@@ -422,6 +421,7 @@ body {
   padding: 5rem 0;
   background-color: var(--section-background);
   text-align: center;
+  overflow: hidden; /* Hide overflow for auto-scrolling */
 }
 
 .testimonials h2 {
@@ -430,16 +430,22 @@ body {
   margin-bottom: 3rem;
 }
 
-.testimonial-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+/* This must match your div class testimonial-slider */
+.testimonial-slider {
+  display: flex;
   gap: 2rem;
+  animation: scroll 40s linear infinite;
+  width: max-content;
 }
 
+/* Each testimonial box */
 .testimonial {
+  min-width: 300px;
   background-color: var(--background-color);
   padding: 2rem;
   border-radius: 12px;
+  text-align: center;
+  flex-shrink: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
@@ -448,9 +454,12 @@ body {
   transform: translateY(-5px);
 }
 
-.quote-icon {
-  font-size: 2rem;
-  color: #6d28d9;
+/* Profile picture inside testimonial */
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 1rem;
 }
 
@@ -463,6 +472,25 @@ body {
 .testimonial h4 {
   font-size: 1rem;
   color: var(--button-primary-bg);
+}
+
+/* Auto-scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive: stop auto-scroll and show normally on mobile */
+@media (max-width: 768px) {
+  .testimonial-slider {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 /* Pricing Section */
