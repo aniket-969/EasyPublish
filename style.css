@@ -273,7 +273,7 @@ body {
 
 /* Why us */
 .why-us {
-  padding: 0 0 3rem 0;
+  padding: 4rem 0;
   background-color: var(--section-background);
   text-align: center;
 }
@@ -357,7 +357,7 @@ body {
 
 /* How It Works Section */
 .how-it-works {
-  padding: 2rem 0;
+  padding: 4rem 0;
   background-color: var(--background-color);
   text-align: center;
 }
@@ -467,7 +467,7 @@ body {
 
 /* Pricing Section */
 .pricing {
-  padding: 2rem 0;
+  padding: 4rem 0;
   background-color: var(--background-color);
   text-align: center;
 }
