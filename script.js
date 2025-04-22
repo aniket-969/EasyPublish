@@ -15,3 +15,8 @@ window.addEventListener('scroll', () => {
     }
   });
   
+  const darkToggle = document.getElementById('dark-mode-toggle');
+
+darkToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});

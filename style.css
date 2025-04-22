@@ -142,6 +142,28 @@ body {
     display: flex;
   }
 }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Dark mode toggle button */
+.dark-toggle {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-toggle:hover {
+  background-color: white;
+  color: #8b5cf6; /* Navbar purple on hover */
+}
 
 /* Hero Section */
 .hero {
