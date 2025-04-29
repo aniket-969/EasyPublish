@@ -119,7 +119,7 @@ body {
 }
 
 /* Responsive styles */
-@media (max-width: 868px) {
+@media (max-width: 968px) {
   .nav-links {
     position: absolute;
     top: 70px; /* below navbar */
