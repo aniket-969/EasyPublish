@@ -660,3 +660,49 @@ body {
     padding: 0.7rem 1.5rem;
   }
 }
+
+/* Proof */
+/* Proof Section */
+.proof {
+  padding: 5rem 0;
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+.proof h2 {
+  font-size: 2.5rem;
+  color: var(--heading-color);
+  margin-bottom: 3rem;
+}
+
+.published-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.published-card {
+  background-color: var(--section-background);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.published-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.published-card h3 {
+  font-size: 1.5rem;
+  color: var(--button-primary-bg);
+  margin-bottom: 0.5rem;
+}
+
+.published-card p {
+  font-size: 1rem;
+  color: var(--muted-text-color);
+}
